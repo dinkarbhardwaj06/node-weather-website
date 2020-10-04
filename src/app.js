@@ -9,7 +9,7 @@ const forecast = require ('./utils/forecast')
 
 
 const app = express()
-
+const port = process.env.PORT || 3000
  //Incorrect Code 
  //app.use(express.static(path.join(__dirname,'../public/about.html')))
  //app.use(express.static(path.join(__dirname,'../public/help.html')))
@@ -110,8 +110,8 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000, ()=>{
-    console.log('Server started on port 3000')
+app.listen(port, ()=>{
+    console.log('Server started on port ' + port)
 })
 
 
